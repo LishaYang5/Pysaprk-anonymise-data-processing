@@ -1,6 +1,14 @@
+# Anonymoise data process
+
 It is used to process the csvfile to anonymise first_name, last_name and address by using spark.
 
-### Source data 
+## Assumptions
+
+1. Values in each column cannot be null.
+2. Values in each column cannot be meaningless after anonymised.
+3. Raw data values cannot be changed.
+
+## Source data
 
 It is downloaded from Free Sample Data (https://www.briandunning.com/sample-data/)
 
@@ -20,8 +28,11 @@ root
 ```
 
 
+## Data process 
 
 ### Required dataframe schema
+
+Use Spark dataframe to generate required dataframe, which schema is showing below.
 
 ```
 root
@@ -43,7 +54,7 @@ root
  |-- date_of_birth: string (nullable = true)
 ```
 
-Anonymised data 
+### Anonymised data overview
 
 ```
 +----------+--------------+----------+-------------+--------------------+--------------------+
@@ -66,4 +77,3 @@ Spark:3.1.1
 Databricks community
 
 Notebook Link: https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2037001060564868/4467286779690775/7714366041074664/latest.html
-
