@@ -19,6 +19,9 @@ delimiter = ","
 # The applied options are for CSV files. For other file types, these will be ignored.
 df = spark.read.format(file_type)   .option("inferSchema", infer_schema)   .option("header", first_row_is_header)   .option("sep", delimiter)   .load(file_location)
 
+# Valid dataframe, drop missing data
+df.na.drop()
+
 # Rename columns
 df = df.withColumnRenamed("_c0","first_name")
 df = df.withColumnRenamed("_c1","last_name")

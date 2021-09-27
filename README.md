@@ -75,5 +75,7 @@ Spark:3.1.1
 
 ### Work Environment
 Databricks community
-
 Notebook Link: https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2037001060564868/4467286779690775/7714366041074664/latest.html
+
+PS. the work environment could be AWS EMR, or build on EC2.
+This link(https://github.com/LishaYang5/deploy-hadoop-spark-on-ec2-with-docker) shows the deployment instruction about build environment on EC2.
